@@ -22,12 +22,17 @@
       padding: 0;
       scroll-behavior: smooth;
     }
-    #contact a, .contact-card a {
+    a {
       color: var(--text-color);
       text-decoration: underline;
     }
-    #contact a:hover, .contact-card a:hover {
+    a:hover {
       color: var(--highlight-color);
+    }
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 2rem;
     }
     .profile-pic {
       width: 140px;
@@ -36,6 +41,35 @@
       border-radius: 50%;
       border: 4px solid var(--highlight-color);
       margin-bottom: 1rem;
+    }
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      color: var(--highlight-color);
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #ddd;
+    }
+    .btn {
+      background: var(--highlight-color);
+      color: #000;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .section {
+      padding: 2rem 1rem;
+    }
+    .section h2 {
+      color: var(--highlight-color);
+      border-left: 4px solid var(--highlight-color);
+      padding-left: 1rem;
     }
     .contact-card {
       position: fixed;
@@ -81,8 +115,76 @@
   </div>
   <button class="scroll-top" id="scrollTopBtn" onclick="scrollToTop()">↑</button>
 
-  <!-- CONTENT STARTS -->
-  <!-- Retain rest of page content here -->
+  <header class="hero">
+    <div class="container">
+      <img src="profile.jpg" alt="Abhishek Prasad" class="profile-pic" />
+      <h1>Abhishek Prasad</h1>
+      <p>Data Science Leader | ML, NLP, Gen AI | Supply Chain, CPG, Finance</p>
+      <a href="Abhishek_Prasad_Resume.pdf" class="btn" download>Download Resume</a>
+    </div>
+  </header>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>10+ years of experience across Supply Chain, Retail, Pharma, Insurance, and Capital Markets. Passionate about solving real-world problems using Machine Learning, NLP, and Gen AI. Always learning, adapting, and delivering impact-driven AI solutions.</p>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="container">
+      <h2>Skills</h2>
+      <p><strong>Primary:</strong> Python, Spark, SQL, ML, NLP, Gen AI</p>
+      <p><strong>Secondary:</strong> Streamlit, Power BI, Git, Alteryx</p>
+      <p><strong>Platforms:</strong> Databricks, Azure ML, GCP Vertex AI</p>
+    </div>
+  </section>
+
+  <section id="experience" class="section">
+    <div class="container">
+      <h2>Experience</h2>
+      <ul>
+        <li><strong>Manager, Data Science – Tredence Analytics</strong> (Aug 2024 – Present)<br>AI agents, forecasting, clustering for Supply Chain & CPG clients.</li>
+        <li><strong>Consultant II – Fractal Analytics</strong> (Aug 2023 – Aug 2024)<br>Entity recognition, product mapping, forecasting in Retail & MDM.</li>
+        <li><strong>Senior Associate – Axtria India</strong> (Mar 2021 – Aug 2021)<br>ML models in Pharma analytics and Covid reporting.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Highlighted Projects</h2>
+      <ul>
+        <li>Raw Material Cost Anomaly Detection – 18–20% cost savings</li>
+        <li>Inventory Policy Optimization + Forecasting for global wholesaler</li>
+        <li>Credit Fraud Detection with Causal Decomposition</li>
+        <li>Physician Classification using XGB & NLP</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="education" class="section">
+    <div class="container">
+      <h2>Education</h2>
+      <p><strong>PGP in Business Analytics</strong> – Praxis Business School, 2019</p>
+      <p><strong>B.Tech in ECE</strong> – WBUT, 2013</p>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:abhishekonit@gmail.com">abhishekonit@gmail.com</a></p>
+      <p>Phone: +91 7003305184</p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/abhishekonit/" target="_blank">abhishekonit</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Abhishek Prasad | Built with HTML & CSS</p>
+    </div>
+  </footer>
 
   <script>
     function scrollToTop() {

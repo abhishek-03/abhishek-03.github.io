@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abhishek Prasad | Data Science and AI Practitioner</title>
+  <title>Abhishek Prasad | Data Science Practitioner</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
     :root {
       --bg-color: #1e1e2f;
@@ -61,12 +62,12 @@
     .container {
       max-width: 960px;
       margin: auto;
-      padding: 2rem 1rem;
+      padding: 3rem 1.5rem;
     }
 
     .hero {
       text-align: center;
-      padding: 3rem 1rem;
+      padding: 3rem 1.5rem;
     }
 
     .profile-pic {
@@ -96,10 +97,6 @@
       font-weight: bold;
       margin-top: 1rem;
       display: inline-block;
-    }
-
-    .section {
-      padding: 2rem 1rem;
     }
 
     .section h2 {
@@ -163,7 +160,7 @@
 
   <button class="scroll-top" id="scrollTopBtn" onclick="scrollToTop()">↑</button>
 
-  <header class="hero">
+  <header class="hero" data-aos="fade-down">
     <div class="container">
       <img src="profile.jpg" alt="Abhishek Prasad" class="profile-pic" />
       <h1>Abhishek Prasad</h1>
@@ -172,14 +169,14 @@
     </div>
   </header>
 
-  <section id="about" class="section">
+  <section id="about" class="section" data-aos="fade-right">
     <div class="container">
       <h2>About Me</h2>
       <p>I am a seasoned Data Science Practitioner with over a decade of experience delivering impact across supply chain, CPG, retail, pharma, and financial services. My expertise lies in applying Machine Learning, NLP, and Generative AI to solve high-stakes business problems—from demand forecasting and inventory optimization to fraud detection and data harmonization. I bring a unique combination of domain knowledge, advanced analytics, and engineering rigor, having built scalable AI solutions on platforms like Databricks, Azure, and GCP. Whether it's developing multi-modal AI agents or decoding raw data into strategic insights, I drive results through collaboration, curiosity, and a relentless focus on value.</p>
     </div>
   </section>
 
-  <section id="education" class="section">
+  <section id="education" class="section" data-aos="fade-left">
     <div class="container">
       <h2>Education</h2>
       <p><strong>PGP in Business Analytics</strong> – Praxis Business School, 2019</p>
@@ -187,7 +184,7 @@
     </div>
   </section>
 
-  <section id="experience" class="section">
+  <section id="experience" class="section" data-aos="zoom-in">
     <div class="container">
       <h2>Experience</h2>
       <ul>
@@ -198,7 +195,7 @@
     </div>
   </section>
 
-  <section id="skills" class="section">
+  <section id="skills" class="section" data-aos="fade-up">
     <div class="container">
       <h2>Skills</h2>
       <p><strong>Primary:</strong> Python, Spark, SQL, Machine Learning, NLP, Gen AI</p>
@@ -207,7 +204,7 @@
     </div>
   </section>
 
-  <section id="contact" class="section">
+  <section id="contact" class="section" data-aos="flip-up">
     <div class="container">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:abhishekonit@gmail.com">abhishekonit@gmail.com</a></p>
@@ -217,19 +214,21 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 Abhishek Prasad | Built with HTML & CSS</p>
+    <p>&copy; 2025 Abhishek Prasad | Built with HTML, CSS & Free 💥</p>
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+    AOS.init({ duration: 1000 });
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
     window.onscroll = function () {
-      const scrollBtn = document.getElementById(\"scrollTopBtn\");
+      const scrollBtn = document.getElementById("scrollTopBtn");
       if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        scrollBtn.classList.add(\"show\");
+        scrollBtn.classList.add("show");
       } else {
-        scrollBtn.classList.remove(\"show\");
+        scrollBtn.classList.remove("show");
       }
     };
   </script>

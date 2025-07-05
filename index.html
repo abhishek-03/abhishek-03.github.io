@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abhishek Prasad | Data Science and AI Practitioner</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #1e1e2f;
+      --text-color: #ffffff;
+      --highlight-color: #fca311;
+      --nav-bg: rgba(20, 20, 30, 0.95);
+    }
+    [data-theme="light"] {
+      --bg-color: #ffffff;
+      --text-color: #222222;
+      --highlight-color: #fca311;
+      --nav-bg: #f9f9f9;
+    }
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.4s, color 0.4s;
+    }
+    #contact a {
+      color: var(--text-color);
+      text-decoration: underline;
+    }
+    #contact a:hover {
+      color: var(--highlight-color);
+    }
+    .theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: var(--highlight-color);
+      color: black;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      z-index: 999;
+    }
+    .contact-card {
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      background: var(--nav-bg);
+      color: var(--text-color);
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      font-size: 0.9rem;
+      z-index: 998;
+    }
+    .scroll-top {
+      position: fixed;
+      bottom: 1rem;
+      left: 1rem;
+      background: var(--highlight-color);
+      color: black;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 998;
+      box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    }
+    .scroll-top.show {
+      display: flex;
+    }
+    .profile-pic {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid var(--highlight-color);
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  <div class="contact-card">
+    <strong>Reach Out:</strong><br>
+    📧 <a href="mailto:abhishekonit@gmail.com">abhishekonit@gmail.com</a><br>
+    🔗 <a href="https://www.linkedin.com/in/abhishekonit/" target="_blank">LinkedIn</a>
+  </div>
+  <button class="scroll-top" id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+
+  <nav class="navbar">
+    <div class="container nav-container">
+      <h1 class="nav-logo">Abhishek Prasad</h1>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero zoom-in">
+    <div class="container">
+      <img src="profile.jpg" alt="Abhishek Prasad" class="profile-pic" />
+      <h1>Abhishek Prasad</h1>
+      <p>Data Science Leader | ML, NLP, Gen AI | Supply Chain, CPG, Finance</p>
+      <a href="Abhishek_Prasad_Resume.pdf" class="btn" download>Download Resume</a>
+    </div>
+  </header>
+
+  <section id="about" class="about section fade-in">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        10+ years of experience across Supply Chain, Retail, Pharma, Insurance, and Capital Markets. Passionate about solving real-world problems using Machine Learning, NLP, and Gen AI. Always learning, adapting, and delivering impact-driven AI solutions.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills" class="skills section fade-in">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skill-box">
+        <h4>Primary</h4>
+        <p>Python, Spark, SQL, ML, NLP, Gen AI</p>
+        <h4>Secondary</h4>
+        <p>Streamlit, Power BI, Git, Alteryx</p>
+        <h4>Platforms</h4>
+        <p>Databricks, Azure ML, GCP Vertex AI</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="experience section fade-in">
+    <div class="container">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div class="job">
+          <h3>Manager, Data Science - Tredence Analytics</h3>
+          <span>Aug 2024 – Present</span>
+          <p>Multi-modal AI agent development, forecasting, clustering, causal analysis for Supply Chain & CPG clients.</p>
+        </div>
+        <div class="job">
+          <h3>Consultant II - Fractal Analytics</h3>
+          <span>Aug 2023 – Aug 2024</span>
+          <p>Built entity recognition, product mapping, standardization and forecasting solutions for Retail, MDM & SCM domains.</p>
+        </div>
+        <div class="job">
+          <h3>Senior Associate - Axtria India</h3>
+          <span>Mar 2021 – Aug 2021</span>
+          <p>ML models for Pharma analytics, Covid report validation, marketing prescription modeling.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects section fade-in">
+    <div class="container">
+      <h2>Highlighted Projects</h2>
+      <ul>
+        <li>Raw Material Cost Anomaly Detection – 18–20% cost savings</li>
+        <li>Forecasting + Inventory Policy Optimization for global wholesale client</li>
+        <li>Credit Fraud Detection and Causal Decomposition for retailers</li>
+        <li>Physician Prescription Classification using XGB & NLP</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="education" class="education section fade-in">
+    <div class="container">
+      <h2>Education</h2>
+      <p><strong>PGP in Business Analytics</strong> – Praxis Business School, 2019</p>
+      <p><strong>B.Tech in ECE</strong> – WBUT, 2013</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact section fade-in">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:abhishekonit@gmail.com">abhishekonit@gmail.com</a></p>
+      <p>Phone: +91 7003305184</p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/abhishekonit/" target="_blank">abhishekonit</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Abhishek Prasad | Built with HTML & CSS</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute("data-theme");
+      document.documentElement.setAttribute(
+        "data-theme",
+        currentTheme === "light" ? "dark" : "light"
+      );
+    }
+    document.documentElement.setAttribute("data-theme", "dark");
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    window.onscroll = function () {
+      const scrollBtn = document.getElementById("scrollTopBtn");
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        scrollBtn.classList.add("show");
+      } else {
+        scrollBtn.classList.remove("show");
+      }
+    };
+  </script>
+</body>
+</html>

@@ -4,8 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abhishek Prasad | Data Science and AI Practitioner</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet" />
   <style>
     :root {
@@ -13,111 +11,111 @@
       --text-color: #ffffff;
       --highlight-color: #fca311;
     }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
       background: var(--bg-color);
       color: var(--text-color);
       font-family: 'Inter', sans-serif;
-      margin: 0;
       scroll-behavior: smooth;
     }
     a {
       color: var(--text-color);
-      text-decoration: underline;
+      text-decoration: none;
     }
     a:hover {
       color: var(--highlight-color);
     }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(30, 30, 47, 0.95);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+
+    .nav-logo {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: var(--highlight-color);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links li a {
+      font-weight: 500;
+    }
+
     .container {
       max-width: 960px;
       margin: auto;
-      padding: 1.5rem 2rem;
+      padding: 2rem 1rem;
     }
-    .profile-pic {
-      width: 140px;
-      height: 140px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid var(--highlight-color);
-      margin-bottom: 1rem;
-    }
+
     .hero {
       text-align: center;
       padding: 3rem 1rem;
     }
+
+    .profile-pic {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 4px solid var(--highlight-color);
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
     .hero h1 {
       font-size: 2.5rem;
       color: var(--highlight-color);
     }
+
     .hero p {
       font-size: 1.1rem;
       color: #ddd;
     }
+
     .btn {
       background: var(--highlight-color);
       color: #000;
       padding: 0.7rem 1.5rem;
       border-radius: 6px;
       font-weight: bold;
-      text-decoration: none;
-      display: inline-block;
       margin-top: 1rem;
+      display: inline-block;
     }
+
     .section {
       padding: 2rem 1rem;
     }
+
     .section h2 {
       color: var(--highlight-color);
       border-left: 4px solid var(--highlight-color);
       padding-left: 1rem;
+      margin-bottom: 1rem;
     }
-    .navbar {
-      position: sticky;
-      top: 0;
-      background: rgba(30, 30, 47, 0.95);
-      backdrop-filter: blur(6px);
-      z-index: 999;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    }
-    .nav-container {
-      max-width: 960px;
-      margin: auto;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .nav-logo {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: var(--highlight-color);
-    }
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-      margin: 0;
-      padding-left: 0;
-    }
-    .nav-links a {
-      color: var(--text-color);
-      text-decoration: none;
-      font-weight: 500;
-    }
-    .nav-links a:hover {
-      color: var(--highlight-color);
-    }
-    .contact-card {
-      position: fixed;
-      bottom: 1rem;
-      right: 1rem;
-      background: #2a2a3d;
-      color: var(--text-color);
-      padding: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+
+    footer {
+      text-align: center;
+      padding: 1rem 0;
       font-size: 0.9rem;
-      z-index: 998;
+      background-color: #2a2a3d;
     }
+
     .scroll-top {
       position: fixed;
       bottom: 1rem;
@@ -137,31 +135,31 @@
       z-index: 998;
       box-shadow: 0 0 8px rgba(0,0,0,0.3);
     }
+
     .scroll-top.show {
       display: flex;
+    }
+
+    @media(max-width: 600px) {
+      .nav-links {
+        flex-direction: column;
+        align-items: flex-end;
+      }
     }
   </style>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="nav-container">
-      <span class="nav-logo">Abhishek Prasad</span>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
 
-  <div class="contact-card">
-    <strong>Reach Out:</strong><br>
-    📧 <a href="mailto:abhishekonit@gmail.com">abhishekonit@gmail.com</a><br>
-    🔗 <a href="https://www.linkedin.com/in/abhishekonit/" target="_blank">LinkedIn</a>
-  </div>
+  <nav class="navbar">
+    <div class="nav-logo">Abhishek Prasad</div>
+    <ul class="nav-links">
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
   <button class="scroll-top" id="scrollTopBtn" onclick="scrollToTop()">↑</button>
 
@@ -181,12 +179,11 @@
     </div>
   </section>
 
-  <section id="skills" class="section">
+  <section id="education" class="section">
     <div class="container">
-      <h2>Skills</h2>
-      <p><strong>Primary:</strong> Python, Spark, SQL, Machine Learning, NLP, Gen AI</p>
-      <p><strong>Secondary:</strong> Streamlit, Power BI, Git, Alteryx</p>
-      <p><strong>Platforms:</strong> Databricks, Azure ML, GCP Vertex AI</p>
+      <h2>Education</h2>
+      <p><strong>PGP in Business Analytics</strong> – Praxis Business School, 2019</p>
+      <p><strong>B.Tech in ECE</strong> – WBUT, 2013</p>
     </div>
   </section>
 
@@ -201,23 +198,12 @@
     </div>
   </section>
 
-  <section id="projects" class="section">
+  <section id="skills" class="section">
     <div class="container">
-      <h2>Highlighted Projects</h2>
-      <ul>
-        <li>Raw Material Cost Anomaly Detection – 18–20% cost savings</li>
-        <li>Inventory Policy Optimization + Forecasting for global wholesaler</li>
-        <li>Credit Fraud Detection with Causal Decomposition</li>
-        <li>Physician Classification using XGB & NLP</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="education" class="section">
-    <div class="container">
-      <h2>Education</h2>
-      <p><strong>PGP in Business Analytics</strong> – Praxis Business School, 2019</p>
-      <p><strong>B.Tech in ECE</strong> – WBUT, 2013</p>
+      <h2>Skills</h2>
+      <p><strong>Primary:</strong> Python, Spark, SQL, Machine Learning, NLP, Gen AI</p>
+      <p><strong>Secondary:</strong> Streamlit, Power BI, Git, Alteryx</p>
+      <p><strong>Platforms:</strong> Databricks, Azure ML, GCP Vertex AI</p>
     </div>
   </section>
 
@@ -231,9 +217,7 @@
   </section>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Abhishek Prasad | Built with HTML & CSS</p>
-    </div>
+    <p>&copy; 2025 Abhishek Prasad | Built with HTML & CSS</p>
   </footer>
 
   <script>
@@ -241,11 +225,11 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
     window.onscroll = function () {
-      const scrollBtn = document.getElementById("scrollTopBtn");
+      const scrollBtn = document.getElementById(\"scrollTopBtn\");
       if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        scrollBtn.classList.add("show");
+        scrollBtn.classList.add(\"show\");
       } else {
-        scrollBtn.classList.remove("show");
+        scrollBtn.classList.remove(\"show\");
       }
     };
   </script>

@@ -4,10 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abhishek Prasad | Data Science and AI Practitioner</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet" />
   <style>
     :root {
       --bg-color: #1e1e2f;
@@ -19,7 +18,6 @@
       color: var(--text-color);
       font-family: 'Inter', sans-serif;
       margin: 0;
-      padding: 0;
       scroll-behavior: smooth;
     }
     a {
@@ -32,7 +30,7 @@
     .container {
       max-width: 960px;
       margin: auto;
-      padding: 2rem;
+      padding: 1.5rem 2rem;
     }
     .profile-pic {
       width: 140px;
@@ -51,17 +49,18 @@
       color: var(--highlight-color);
     }
     .hero p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: #ddd;
     }
     .btn {
       background: var(--highlight-color);
       color: #000;
       padding: 0.7rem 1.5rem;
-      border: none;
       border-radius: 6px;
       font-weight: bold;
       text-decoration: none;
+      display: inline-block;
+      margin-top: 1rem;
     }
     .section {
       padding: 2rem 1rem;
@@ -70,6 +69,42 @@
       color: var(--highlight-color);
       border-left: 4px solid var(--highlight-color);
       padding-left: 1rem;
+    }
+    .navbar {
+      position: sticky;
+      top: 0;
+      background: rgba(30, 30, 47, 0.95);
+      backdrop-filter: blur(6px);
+      z-index: 999;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+    .nav-container {
+      max-width: 960px;
+      margin: auto;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-logo {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: var(--highlight-color);
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding-left: 0;
+    }
+    .nav-links a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .nav-links a:hover {
+      color: var(--highlight-color);
     }
     .contact-card {
       position: fixed;
@@ -109,30 +144,32 @@
 </head>
 <body>
   <nav class="navbar">
-  <div class="container nav-container">
-    <span class="nav-logo">Abhishek Prasad</span>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-</nav>
+    <div class="nav-container">
+      <span class="nav-logo">Abhishek Prasad</span>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <div class="contact-card">
     <strong>Reach Out:</strong><br>
     📧 <a href="mailto:abhishekonit@gmail.com">abhishekonit@gmail.com</a><br>
     🔗 <a href="https://www.linkedin.com/in/abhishekonit/" target="_blank">LinkedIn</a>
   </div>
+
   <button class="scroll-top" id="scrollTopBtn" onclick="scrollToTop()">↑</button>
 
   <header class="hero">
     <div class="container">
       <img src="profile.jpg" alt="Abhishek Prasad" class="profile-pic" />
       <h1>Abhishek Prasad</h1>
-      <p>Data Science Leader | ML, NLP, Gen AI | Supply Chain, CPG, Finance</p>
+      <p>Data Science Practitioner | ML, NLP, Gen AI | Supply Chain, CPG, Finance</p>
       <a href="Abhishek_Prasad_Resume.pdf" class="btn" download>Download Resume</a>
     </div>
   </header>
@@ -140,14 +177,14 @@
   <section id="about" class="section">
     <div class="container">
       <h2>About Me</h2>
-      <p>10+ years of experience across Supply Chain, Retail, Pharma, Insurance, and Capital Markets. Passionate about solving real-world problems using Machine Learning, NLP, and Gen AI. Always learning, adapting, and delivering impact-driven AI solutions.</p>
+      <p>I am a seasoned Data Science Practitioner with over a decade of experience delivering impact across supply chain, CPG, retail, pharma, and financial services. My expertise lies in applying Machine Learning, NLP, and Generative AI to solve high-stakes business problems—from demand forecasting and inventory optimization to fraud detection and data harmonization. I bring a unique combination of domain knowledge, advanced analytics, and engineering rigor, having built scalable AI solutions on platforms like Databricks, Azure, and GCP. Whether it's developing multi-modal AI agents or decoding raw data into strategic insights, I drive results through collaboration, curiosity, and a relentless focus on value.</p>
     </div>
   </section>
 
   <section id="skills" class="section">
     <div class="container">
       <h2>Skills</h2>
-      <p><strong>Primary:</strong> Python, Spark, SQL, ML, NLP, Gen AI</p>
+      <p><strong>Primary:</strong> Python, Spark, SQL, Machine Learning, NLP, Gen AI</p>
       <p><strong>Secondary:</strong> Streamlit, Power BI, Git, Alteryx</p>
       <p><strong>Platforms:</strong> Databricks, Azure ML, GCP Vertex AI</p>
     </div>
@@ -189,7 +226,7 @@
       <h2>Contact</h2>
       <p>Email: <a href="mailto:abhishekonit@gmail.com">abhishekonit@gmail.com</a></p>
       <p>Phone: +91 7003305184</p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/abhishekonit/" target="_blank">abhishekonit</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/abhishekonit/" target="_blank">linkedin.com/in/abhishekonit</a></p>
     </div>
   </section>
 
